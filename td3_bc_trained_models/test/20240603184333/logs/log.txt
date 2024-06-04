@@ -1,0 +1,28 @@
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['flat']
+using obs modality: rgb with keys: []
+using obs modality: depth with keys: []
+using obs modality: scan with keys: []
+
+============= Loaded Environment Metadata =============
+run failed with error:
+"Unable to synchronously open object (object 'flat' doesn't exist)"
+
+Traceback (most recent call last):
+  File "/home/sj/assistive_feed_gello/Assistive_Feeding_Gello/gello/dm_control_tasks/robomimic/robomimic/scripts/train.py", line 378, in main
+    train(config, device=device)
+  File "/home/sj/assistive_feed_gello/Assistive_Feeding_Gello/gello/dm_control_tasks/robomimic/robomimic/scripts/train.py", line 78, in train
+    shape_meta = FileUtils.get_shape_metadata_from_dataset(
+  File "/home/sj/assistive_feed_gello/Assistive_Feeding_Gello/robomimic/robomimic/utils/file_utils.py", line 153, in get_shape_metadata_from_dataset
+    initial_shape = demo["obs/{}".format(k)].shape[1:]
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "/home/sj/miniconda3/envs/robomimic_env/lib/python3.9/site-packages/h5py/_hl/group.py", line 357, in __getitem__
+    oid = h5o.open(self.id, self._e(name), lapl=self._lapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5o.pyx", line 189, in h5py.h5o.open
+KeyError: "Unable to synchronously open object (object 'flat' doesn't exist)"
+

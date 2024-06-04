@@ -1,0 +1,17 @@
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_eef_pos', 'robot0_eef_quat', 'robot0_joint_pos']
+using obs modality: rgb with keys: []
+using obs modality: depth with keys: []
+using obs modality: scan with keys: []
+run failed with error:
+Dataset at provided path /home/sj/Downloads/low_dim_v141.hdf5 not found!
+
+Traceback (most recent call last):
+  File "/home/sj/assistive_feed_gello/Assistive_Feeding_Gello/gello/dm_control_tasks/robomimic/robomimic/scripts/train.py", line 378, in main
+    train(config, device=device)
+  File "/home/sj/assistive_feed_gello/Assistive_Feeding_Gello/gello/dm_control_tasks/robomimic/robomimic/scripts/train.py", line 73, in train
+    raise Exception("Dataset at provided path {} not found!".format(dataset_path))
+Exception: Dataset at provided path /home/sj/Downloads/low_dim_v141.hdf5 not found!
+

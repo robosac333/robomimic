@@ -36,7 +36,7 @@
         }
     },
     "train": {
-        "data": null,
+        "data": "/home/sj/Downloads/test2_data.hdf5",
         "output_dir": "../bc_trained_models",
         "num_data_workers": 0,
         "hdf5_cache_mode": "all",
@@ -45,9 +45,9 @@
         "hdf5_normalize_obs": false,
         "hdf5_filter_key": null,
         "hdf5_validation_filter_key": null,
-        "seq_length": 1,
+        "seq_length": 10,
         "pad_seq_length": true,
-        "frame_stack": 1,
+        "frame_stack": 10,
         "pad_frame_stack": true,
         "dataset_keys": [
             "actions",
@@ -135,26 +135,26 @@
             ]
         },
         "rnn": {
-            "enabled": false,
-            "horizon": 10,
-            "hidden_dim": 400,
+            "enabled": true,
+            "horizon": 30,
+            "hidden_dim": 512,
             "rnn_type": "LSTM",
-            "num_layers": 2,
+            "num_layers": 4,
             "open_loop": false,
             "kwargs": {
                 "bidirectional": false
             }
         },
         "transformer": {
-            "enabled": false,
-            "context_length": 10,
+            "enabled": true,
+            "context_length": 20,
             "embed_dim": 512,
             "num_layers": 6,
             "num_heads": 8,
             "emb_dropout": 0.1,
             "attn_dropout": 0.1,
             "block_output_dropout": 0.1,
-            "sinusoidal_embedding": false,
+            "sinusoidal_embedding": true,
             "activation": "gelu",
             "supervise_all_steps": false,
             "nn_parameter_for_timesteps": true

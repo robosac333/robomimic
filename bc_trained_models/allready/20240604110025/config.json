@@ -1,7 +1,7 @@
 {
     "algo_name": "bc",
     "experiment": {
-        "name": "test",
+        "name": "allready",
         "validate": false,
         "logging": {
             "terminal_output_to_txt": true,
@@ -36,7 +36,7 @@
         }
     },
     "train": {
-        "data": null,
+        "data": "/home/sj/Downloads/lift/ph/low_dim_v141.hdf5",
         "output_dir": "../bc_trained_models",
         "num_data_workers": 0,
         "hdf5_cache_mode": "all",
@@ -135,26 +135,26 @@
             ]
         },
         "rnn": {
-            "enabled": false,
-            "horizon": 10,
-            "hidden_dim": 400,
+            "enabled": true,
+            "horizon": 30,
+            "hidden_dim": 512,
             "rnn_type": "LSTM",
-            "num_layers": 2,
+            "num_layers": 4,
             "open_loop": false,
             "kwargs": {
                 "bidirectional": false
             }
         },
         "transformer": {
-            "enabled": false,
-            "context_length": 10,
+            "enabled": true,
+            "context_length": 20,
             "embed_dim": 512,
             "num_layers": 6,
             "num_heads": 8,
             "emb_dropout": 0.1,
             "attn_dropout": 0.1,
             "block_output_dropout": 0.1,
-            "sinusoidal_embedding": false,
+            "sinusoidal_embedding": true,
             "activation": "gelu",
             "supervise_all_steps": false,
             "nn_parameter_for_timesteps": true
@@ -164,8 +164,6 @@
         "modalities": {
             "obs": {
                 "low_dim": [
-                    "robot0_eef_pos",
-                    "robot0_eef_quat",
                     "robot0_joint_pos"
                 ],
                 "rgb": [],
