@@ -36,7 +36,7 @@
         }
     },
     "train": {
-        "data": "/home/sj/Downloads/lift/ph/low_dim_v141.hdf5",
+        "data": "/home/sj/Downloads/test2_data.hdf5",
         "output_dir": "../bc_trained_models",
         "num_data_workers": 0,
         "hdf5_cache_mode": "all",
